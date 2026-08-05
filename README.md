@@ -1,28 +1,17 @@
 # Calculator
-print("welcome to the calculator")
-print("(digits, ., +, -, *, /, c are valid)")
 
-valid_chars = set("0123456789.+-*/")
-expression = []
+A simple calculator written in Python.
 
-while True:
-    entry = input()
+## Features
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Clear command (`c`)
+- Evaluate expression with (`=`)
 
-    if entry == "c":
-        expression = []
-        print("cleared")
-        continue
+## Run
 
-    if entry == "=":
-        if expression:
-            equation = " ".join(expression)
-            result = eval(equation)
-            print(equation)
-            print(result)
-            expression = []
-        continue
-
-    if entry != "" and all(ch in valid_chars for ch in entry):
-        expression.append(entry)
-    else:
-        print("invalid input, try again")
+```bash
+python calculator.py
+```
